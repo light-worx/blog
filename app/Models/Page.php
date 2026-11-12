@@ -13,6 +13,6 @@ class Page extends Model
 
     public function toSearchableArray(): array
     {
-        return ['title' => $this->title, 'description' => strip_tags((string) $this->description)];
+        return ['title' => $this->title, 'content' => strip_tags((string) $this->description)];
     }
 }

@@ -18,6 +18,6 @@ class Post extends Model
 
     public function toSearchableArray(): array
     {
-        return ['title' => $this->title, 'description' => strip_tags((string) $this->excerpt)];
+        return ['title' => $this->title, 'excerpt' => strip_tags((string) $this->excerpt)];
     }
 }

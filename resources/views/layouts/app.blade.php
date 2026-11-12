@@ -33,7 +33,11 @@
             ['About', route('about'), ['about']],
         ];
     @endphp
-
+    @unless (config('site.public'))
+        <div role="status" class="bg-ink px-5 py-2 text-center text-sm text-paper">
+            The site is offline to the public. Only logged-in users can see it.
+        </div>
+    @endunless
     <header class="border-b border-line">
         <div class="mx-auto flex max-w-4xl flex-wrap items-center gap-x-8 gap-y-3 px-5 py-4">
             <a href="{{ route('home') }}" class="font-serif text-xl font-semibold tracking-tight">{{ config('app.name') }}</a>

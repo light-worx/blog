@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Page;
 use App\Models\Post;
 use App\Models\Video;
+use Illuminate\Http\Request;
 
 class SearchController extends Controller
 {
