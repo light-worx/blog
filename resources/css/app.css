@@ -1,0 +1,48 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-serif: "Newsreader", Georgia, "Times New Roman", serif;
+  --font-sans: "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
+
+  /* Light palette */
+  --color-paper: #f7f7f9;
+  --color-ink: #1e2235;
+  --color-muted: #5e6478;
+  --color-line: #dcdfe8;
+  --color-accent: #2e3fc4;
+}
+
+/* Dark palette: toggled by the .dark class on <html> */
+:root.dark {
+  --color-paper: #14161f;
+  --color-ink: #e7e9f2;
+  --color-muted: #a0a6bc;
+  --color-line: #2a2e3f;
+  --color-accent: #a5b0ff;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Point the typography plugin at the site palette so prose follows light/dark */
+.prose {
+  --tw-prose-body: var(--color-ink);
+  --tw-prose-headings: var(--color-ink);
+  --tw-prose-lead: var(--color-muted);
+  --tw-prose-links: var(--color-accent);
+  --tw-prose-bold: var(--color-ink);
+  --tw-prose-counters: var(--color-muted);
+  --tw-prose-bullets: var(--color-muted);
+  --tw-prose-hr: var(--color-line);
+  --tw-prose-quotes: var(--color-ink);
+  --tw-prose-quote-borders: var(--color-line);
+  --tw-prose-captions: var(--color-muted);
+  --tw-prose-code: var(--color-ink);
+  --tw-prose-pre-code: var(--color-ink);
+  --tw-prose-pre-bg: color-mix(in srgb, var(--color-ink) 8%, var(--color-paper));
+  --tw-prose-th-borders: var(--color-line);
+  --tw-prose-td-borders: var(--color-line);
+}
